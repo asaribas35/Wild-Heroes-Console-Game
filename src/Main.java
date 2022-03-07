@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 
@@ -8,21 +10,23 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        double kdv;
+        int a ,b ,c, u;
+        System.out.print("Üçgenin 1. kenarını giriniz: ");
+        a = inp.nextInt();
+        System.out.print("Üçgenin 2. kenarını giriniz: ");
+        b = inp.nextInt();
+        System.out.print("Üçgenin 3. kenarını giriniz: ");
+        c = inp.nextInt();
 
-        System.out.print("Ürünün fiyatını giriniz: ");
-        int fiyat = inp.nextInt();
 
-        if (fiyat<=1000 && fiyat>=0){
-            kdv = 0.18;
-        }else {
-            kdv = 0.08;
-        }
 
-        System.out.println("kdv'siz fiyat : " +fiyat);
-        System.out.println("kdv'li fiyat : " + (fiyat+fiyat*kdv));
-        System.out.println("kdv tutarı : " + (fiyat*kdv));
+        u = (a+b+c)/2;
 
+
+
+        System.out.println("Üçgenin çevresi: " + (2*u));
+
+        System.out.println("Üçgenin alanı: " + (int)Math.sqrt(u*(u-a)*(u-b)*(u-c)) );
 
 
 
