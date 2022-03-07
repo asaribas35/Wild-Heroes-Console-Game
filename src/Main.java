@@ -10,13 +10,12 @@ public class Main {
      */
     public static void main(String[] args) {
     Scanner inp = new Scanner(System.in);
-    int r,a;
-    double pi = 3.14;
-        System.out.print("Dairenin yarıçapını giriniz: ");
-        r = inp.nextInt();
-        System.out.print("Alfa merkez açısını giriniz: ");
-        a= inp.nextInt();
-
-        System.out.println("Daire diliminin alanı: " + (pi*(r*r)*a/360) );
+    int kilo;
+    double boy;
+        System.out.println("Lütfen boyunuzu (metre cinsinde) giriniz :");
+        boy = inp.nextDouble();
+        System.out.println("Lütfen kilonuzu giriniz :");
+        kilo = inp.nextInt();
+        System.out.println("Vücut kitle endeksiniz: " + (kilo/(boy*boy) ) );
     }
 }
