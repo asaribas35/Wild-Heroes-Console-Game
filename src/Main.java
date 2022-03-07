@@ -8,29 +8,21 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
-        int mat, alg, tar, oop, ugi;
-        System.out.print("matematik dersinin notunu giriniz: ");
-        mat = inp.nextInt();
+        double kdv;
 
-        System.out.print("algoritma dersinin notunu giriniz: ");
-        alg = inp.nextInt();
+        System.out.print("Ürünün fiyatını giriniz: ");
+        int fiyat = inp.nextInt();
 
-        System.out.print("tarih dersinin notunu giriniz: ");
-        tar = inp.nextInt();
+        if (fiyat<=1000 && fiyat>=0){
+            kdv = 0.18;
+        }else {
+            kdv = 0.08;
+        }
 
-        System.out.print("oop dersinin notunu giriniz: ");
-        oop = inp.nextInt();
+        System.out.println("kdv'siz fiyat : " +fiyat);
+        System.out.println("kdv'li fiyat : " + (fiyat+fiyat*kdv));
+        System.out.println("kdv tutarı : " + (fiyat*kdv));
 
-        System.out.print("Üniversiteye giriş dersinin notunu giriniz: ");
-        ugi = inp.nextInt();
-
-        int ort = ((mat+alg+tar+oop+ugi)/5);
-
-        boolean bool = (ort>=60);
-
-
-        System.out.println("ortalamanız : " + ort);
-        System.out.println(bool ? "tebrikler sınıfı geçtiniz":"maalesef sınıfı geçemediniz");
 
 
 
