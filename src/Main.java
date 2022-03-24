@@ -8,10 +8,10 @@ public class Main {
         System.out.print("Username : ");
         String userName = inp.nextLine();
         Player user = new Player(userName);
-        SafeHouse sh = new SafeHouse(user,"Base");
 
 
-        Game wh = new Game(user,sh);
+
+        Game wh = new Game(user);
 
         wh.start();
 
