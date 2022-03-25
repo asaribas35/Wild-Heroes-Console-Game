@@ -8,7 +8,7 @@ public class Main {
         System.out.print("Username : ");
         String userName = inp.nextLine();
         Player user = new Player(userName);
-
+        user.selectChar();
 
 
         Game wh = new Game(user);

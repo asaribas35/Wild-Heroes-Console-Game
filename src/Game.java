@@ -23,6 +23,7 @@ public class Game {
         Scanner inp = new Scanner(System.in);
         Toolstore ts = new Toolstore(player,"Tool Market");
         System.out.println("Welcome " + player.getName());
+
         System.out.println("You are on " + location.getName());
         System.out.println("1. Go Market ");
         System.out.println("2. Char Info ");
@@ -34,23 +35,17 @@ public class Game {
                 setLocation(ts);
                 ts.menu();
                 start();
+                break;
             case  2:
                 player.getInfo();
                 start();
+                break;
             case 3:
                 break;
             default:
                 break;
 
         }
-
-
-        //player.getInfo();
-
-        //setLocation(ts);
-
-        //ts.menu();
-
 
 
     }
