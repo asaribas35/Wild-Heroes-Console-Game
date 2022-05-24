@@ -3,12 +3,22 @@ public class Character {
     private int damage;
     private int health;
     private int money;
+    private String name;
 
-    public Character(int id, int damage, int health, int money) {
+    public Character(int id, int damage, int health, int money, String name) {
         this.id = id;
         this.damage = damage;
         this.health = health;
         this.money = money;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {

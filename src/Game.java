@@ -19,15 +19,20 @@ public class Game {
 
     void start(){
         SafeHouse sh = new SafeHouse(player,"Base");
+        Toolstore ts = new Toolstore(player,"Tool Market");
+        BattleLoc bl = new BattleLoc(player,"Battle Loc");
+
+
         setLocation(sh);
         Scanner inp = new Scanner(System.in);
-        Toolstore ts = new Toolstore(player,"Tool Market");
-        System.out.println("Welcome " + player.getName());
 
-        System.out.println("You are on " + location.getName());
+        System.out.print("Welcome " + player.getName());
+
+        System.out.println(" You are on " + location.getName());
         System.out.println("1. Go Market ");
         System.out.println("2. Char Info ");
-        System.out.println("3. Exit Game ");
+        System.out.println("3. Go Battle Area");
+        System.out.println("4. Exit Game ");
         int c = inp.nextInt();
 
         switch (c){
@@ -41,12 +46,19 @@ public class Game {
                 start();
                 break;
             case 3:
+                setLocation(bl);
+                bl.menu();
+                start();
                 break;
             default:
                 break;
 
         }
+        inp.close();
 
+    }
+
+    void createMonsters(){
 
     }
 

@@ -25,7 +25,7 @@ public class Player {
         System.out.println("oyuncu can : " + getHealty());
         System.out.println("oyuncu hasar : " + getDamage());
         System.out.println("para : " + getMoney());
-        System.out.println("Character no : " + getCharacter().getId());
+        System.out.println("Character tipi : " + getCharacter().getName());
         System.out.println("-----------------------Inventory---------------------------");
         System.out.println("weapon name : " + getInventory().getWeaponName());
         System.out.println("weapon damage : " + getInventory().getWeaponDamage());
@@ -36,6 +36,7 @@ public class Player {
         System.out.println("press any key for exit . ");
         Scanner s = new Scanner(System.in);
         s.nextLine();
+        
     }
 
     public void setInventory(Inventory inventory) {
@@ -43,7 +44,7 @@ public class Player {
     }
 
     public Inventory setInventory(){
-        Inventory inv = new Inventory(true,true,true,"weapon",10,5);
+        Inventory inv = new Inventory(true,true,true,"weapon",1,1);
         return inv;
     }
 
@@ -89,9 +90,9 @@ public class Player {
 
     void selectChar(){
         Scanner s = new Scanner(System.in);
-        Character samurai = new Character(1,5,21,15);
-        Character bow = new Character(2,7,18,20);
-        Character  knight = new Character(3,8,24,5);
+        Character samurai = new Character(1,5,21,15,"samurai");
+        Character bow = new Character(2,7,18,20,"bow");
+        Character  knight = new Character(3,8,24,5,"knight");
 
         System.out.println("---Select Character---");
         System.out.println("1. Samurai (Damage:5 Health:21 Cost:15 )");

@@ -14,7 +14,7 @@ public class Main {
         Game wh = new Game(user);
 
         wh.start();
-
+        inp.close();
 
 
     }
