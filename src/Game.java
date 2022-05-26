@@ -17,7 +17,7 @@ public class Game {
         this.location = location;
     }
 
-    void start(){
+     void start(){
         SafeHouse sh = new SafeHouse(player,"Base");
         Toolstore ts = new Toolstore(player,"Tool Market");
         BattleLoc bl = new BattleLoc(player,"Battle Loc");
@@ -29,25 +29,32 @@ public class Game {
         System.out.print("Welcome " + player.getName());
 
         System.out.println(" You are on " + location.getName());
-        System.out.println("1. Go Market ");
-        System.out.println("2. Char Info ");
-        System.out.println("3. Go Battle Area");
-        System.out.println("4. Exit Game ");
+        System.out.println("1. Go Battle Area ");
+        System.out.println("2. Go Market  ");
+        System.out.println("3. Char Info");
+        System.out.println("4. Go Safe Area ");
+        System.out.println("5. Exit Game");
         int c = inp.nextInt();
 
         switch (c){
             case 1:
+                setLocation(bl);
+                bl.start();
+                start();
+                break;
+
+            case  2:
                 setLocation(ts);
                 ts.menu();
                 start();
                 break;
-            case  2:
+
+            case 3:
                 player.getInfo();
                 start();
                 break;
-            case 3:
-                setLocation(bl);
-                bl.menu();
+            case 4:
+                sh.onLocation();
                 start();
                 break;
             default:

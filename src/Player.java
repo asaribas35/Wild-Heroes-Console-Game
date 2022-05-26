@@ -90,14 +90,14 @@ public class Player {
 
     void selectChar(){
         Scanner s = new Scanner(System.in);
-        Character samurai = new Character(1,5,21,15,"samurai");
-        Character bow = new Character(2,7,18,20,"bow");
-        Character  knight = new Character(3,8,24,5,"knight");
+        Character samurai = new Character(1,5,51,15,"samurai");
+        Character bow = new Character(2,7,58,20,"bow");
+        Character  knight = new Character(3,8,64,5,"knight");
 
         System.out.println("---Select Character---");
-        System.out.println("1. Samurai (Damage:5 Health:21 Cost:15 )");
-        System.out.println("2. Bow (Damage:7 Health:18 Cost:20 )");
-        System.out.println("3. Knight (Damage:8 Health:24 Cost:5 )");
+        System.out.println("1. Samurai (Damage:"+samurai.getDamage()+" Health:"+samurai.getHealth()+" Cost:"+samurai.getMoney()+" )");
+        System.out.println("2. Bow (Damage:"+bow.getDamage()+" Health:"+bow.getHealth()+" Cost:"+bow.getMoney()+" )");
+        System.out.println("3. Knight (Damage:"+knight.getDamage()+" Health:"+knight.getHealth()+" Cost:"+knight.getMoney()+" )");
         int c = s.nextInt();
 
         switch (c){
