@@ -4,6 +4,7 @@ public class Player {
     private Inventory inventory;
     private Character character;
     private int damage = 1;
+    private int maxHP = 1;
     private int healty = 1;
     private int money = 50;
     private String name;
@@ -15,12 +16,20 @@ public class Player {
 
     }
 
+    public int getMaxHP() {
+        return maxHP;
+    }
+
+    public void setMaxHP(int maxHP) {
+        this.maxHP = maxHP;
+    }
+
     public Inventory getInventory() {
         return inventory;
     }
 
     public void getInfo(){
-
+        Main.clearScreen();
         System.out.println("oyuncu adı : " + getName());
         System.out.println("oyuncu can : " + getHealty());
         System.out.println("oyuncu hasar : " + getDamage());
@@ -105,6 +114,7 @@ public class Player {
                 if (getMoney()>= samurai.getMoney()){
                     setDamage(samurai.getDamage());
                     setHealty(samurai.getHealth());
+                    setMaxHP(samurai.getHealth());
                     setMoney(getMoney()- samurai.getMoney());
                     setCharacter(samurai);
                     System.out.println("Samuray seçildi");
@@ -117,6 +127,7 @@ public class Player {
                 if (getMoney()>= bow.getMoney()){
                     setDamage(bow.getDamage());
                     setHealty(bow.getHealth());
+                    setMaxHP(bow.getHealth());
                     setMoney(getMoney()- bow.getMoney());
                     setCharacter(bow);
                     System.out.println("Bow seçildi");
@@ -128,6 +139,7 @@ public class Player {
                 if (getMoney()>= knight.getMoney()){
                     setDamage(knight.getDamage());
                     setHealty(knight.getHealth());
+                    setMaxHP(knight.getHealth());
                     setMoney(getMoney()- knight.getMoney());
                     setCharacter(knight);
                     System.out.println("Knight seçildi");

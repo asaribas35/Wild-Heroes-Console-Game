@@ -11,6 +11,7 @@ public class Toolstore extends NormalLoc{
         return true;
     }
     void menu(){
+        Main.clearScreen();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
         System.out.println(super.getName()+"a Hoşgeldiniz ---------------------------");
         System.out.println("bakiye: " + getPlayer().getMoney());

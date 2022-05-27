@@ -6,7 +6,7 @@ public class SafeHouse extends NormalLoc{
 
     @Override
     boolean onLocation() {
-        getPlayer().setHealty(100);
+        getPlayer().setHealty(getPlayer().getMaxHP());
         return true;
     }
 }

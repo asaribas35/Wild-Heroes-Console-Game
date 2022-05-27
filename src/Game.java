@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Game {
     Player player;
     Location location;
@@ -18,6 +19,7 @@ public class Game {
     }
 
      void start(){
+        Main.clearScreen();
         SafeHouse sh = new SafeHouse(player,"Base");
         Toolstore ts = new Toolstore(player,"Tool Market");
         BattleLoc bl = new BattleLoc(player,"Battle Loc");
@@ -43,7 +45,7 @@ public class Game {
                 start();
                 break;
 
-            case  2:
+            case 2:
                 setLocation(ts);
                 ts.menu();
                 start();
@@ -56,6 +58,8 @@ public class Game {
             case 4:
                 sh.onLocation();
                 start();
+                break;
+            case 5:
                 break;
             default:
                 break;

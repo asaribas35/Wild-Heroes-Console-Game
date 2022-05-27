@@ -20,7 +20,7 @@ public class BattleLoc extends Location{
 
 
     void start(){
-
+        Main.clearScreen();
         ArrayList<BattleLoc> battleLocArrayList = new ArrayList<BattleLoc>();
 
         Monster movia = new Monster("Movia",5,20,5);
@@ -48,7 +48,7 @@ public class BattleLoc extends Location{
         System.out.println(" Welcome "+ getPlayer().getName()+ " Battle Area");
         System.out.println("-----------------Select Battle Area-----------------------");
         for(int i=0;i<bl.size();i++){
-            System.out.println(i+1 +" . " + bl.get(i).getName() + " - (Level "+bl.get(i).getMonster().getDamage()+")");
+            System.out.println(i+1 +" . " + bl.get(i).getName() + " - (Level "+(i+1)+")");
         }
         System.out.println((bl.size()+1)+" . Exit" );
         choice(bl);
